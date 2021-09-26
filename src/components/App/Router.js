@@ -1,16 +1,17 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import PrivateRoute from '../Auth/privateRoute'
 
 
-import Signup from '../Clients/Signup'
-import Signin from '../Clients/Signin'
+import DashboardOwner from '../Owner/dashboard'
+import AddProduct from '../Owner/ProductAdd'
 
 function Routes() {
     return (
         <BrowserRouter>
         <Switch>
-            <Route path="/signup" exact component={Signup} />
-            <Route path="/signin" exact component={Signin} />
+            <Route path="/dashboard/owner" exact component={DashboardOwner} />
+            <Route path="/dashboard/addProduct" exact component={AddProduct} />
         </Switch>
         </BrowserRouter>
     )
